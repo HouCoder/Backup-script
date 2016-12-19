@@ -5,7 +5,7 @@ TARGET=${1%/}
 DESTINATION=${2%/}
 MAXIMUM_DAYS=$3
 BASENAME=$(basename $TARGET)
-TARGET_FILE_NAME=$BASENAME-$(date +%Y-%m-%d:%H:%M:%S).tar.gz
+TARGET_FILE_NAME=$BASENAME-$(date +%Y-%m-%d.%H.%M.%S).tar.gz
 FULL_TARGET_PATH=$DESTINATION/$TARGET_FILE_NAME
 
 # Detect OS types: OS X, Linux.
