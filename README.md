@@ -14,7 +14,7 @@ This script accepts three parameters:
 
 1. Target folder/file you want to backup.
 2. Destination folder you want to store your backups.
-3. Maximum days for keeping you backups, if you set it to 10, this script will delete all your backups in 10 days ago.
+3. Maximum days for keeping your backups, if you set it to 10, this script will delete all your backups in 10 days ago.
 
 Example:
 
@@ -76,7 +76,13 @@ Save the following code snippet as `com.tonni.BackupProjectsToDropbox.plist` in 
 
 `$ launchctl load com.tonni.BackupProjectsToDropbox.plist`.
 
-### Linux
+### Cron(Linux)
+
+Open your cron config file: `$ crontab -e` and append the following line in the config file:
+
+```shell
+0 22 * * * /home/tonni/.Backup-script/backup.sh /home/tonni/Project /home/tonni/Dropbox 3 >> /tmp/backup.log
+```
 
 ## LICENSE
 
